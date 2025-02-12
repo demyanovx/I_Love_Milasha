@@ -1,7 +1,7 @@
 // Создаём звёзды
 function createStars() {
 	const starsContainer = document.getElementById('stars-container')
-	const numStars = 200 // Увеличиваем количество звёзд
+	const numStars = 100 // Увеличиваем количество звёзд
 	const colors = ['#ffffff', '#ffdddd', '#ddddff', '#ffcc00', '#00ccff'] // Разные цвета звёзд
 
 	for (let i = 0; i < numStars; i++) 
