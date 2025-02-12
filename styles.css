@@ -28,10 +28,10 @@ body
 
 .heart
 {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 25px;
-    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 15px;
 }
 
 .text-container
@@ -69,12 +69,12 @@ body
 #start-button
 {
     margin-top: 20px;
-    padding: 25px 50px;
-    font-size: 24px;
+    padding: 18px 25px;
+    font-size: 20px;
     color: white;
     background-color: #ff0000; /* Исходный цвет */
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 0.5s ease; /* Плавные переходы для всех свойств */
     position: relative; /* Добавляем позиционирование */
@@ -131,8 +131,8 @@ body
 .photo
 {
     position: absolute;
-    width: 200px; /* Размер фотографии */
-    height: 200px;
+    width: 100px; /* Размер фотографии */
+    height: 100px;
     border-radius: 10px;
     object-fit: cover;
     animation: dissolveIn 2s ease-in-out forwards, evaporate 2s ease-in-out 5s forwards;
