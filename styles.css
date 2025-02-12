@@ -1,0 +1,178 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Чёрный фон */
+    font-family: 'Helvetica', sans-serif;
+    overflow: hidden;
+}
+
+.container
+{
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Убедимся, что контент выше звёзд */
+}
+
+.heart
+{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+.text-container
+{
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#text
+{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+    white-space: pre-line;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 2s ease-in-out forwards; /* Анимация появления */
+}
+
+@keyframes fadeIn
+{
+    from 
+    { opacity: 0; 
+        }
+    to 
+    { opacity: 1; 
+        }
+}
+
+#start-button
+{
+    margin-top: 20px;
+    padding: 25px 50px;
+    font-size: 24px;
+    color: white;
+    background-color: #ff0000; /* Исходный цвет */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Плавные переходы для всех свойств */
+    position: relative; /* Добавляем позиционирование */
+    z-index: 1; /* Убедимся, что кнопка выше текста */
+}
+
+#start-button:hover
+{
+    background-color: #FB0456; /* Цвет при наведении */
+}
+
+#start-button:active
+{
+    background-color: #FF69B4; /* Розовый цвет при нажатии */
+    transform: scale(0.95); /* Уменьшение размера */
+    opacity: 0; /* Плавное исчезновение */
+    transition: all 2s ease; /* Увеличиваем длительность анимации исчезновения */
+}
+
+/* Стили для звёзд */
+#stars-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Звёзды на заднем плане */
+}
+
+/* Стили для звёзд */
+.star
+{
+    position: absolute;
+    width: 2px; /* Увеличиваем размер звёзд */
+    height: 2px; /* Увеличиваем размер звёзд */
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Добавляем свечение */
+}
+
+@keyframes twinkle
+{
+    0%, 100% 
+    { opacity: 0; 
+        }
+    50% 
+    { opacity: 1; 
+        }
+}
+
+/* Стили для фотографий */
+.photo
+{
+    position: absolute;
+    width: 200px; /* Размер фотографии */
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: dissolveIn 2s ease-in-out forwards, evaporate 2s ease-in-out 5s forwards;
+}
+
+@keyframes dissolveIn
+{
+    from 
+    { opacity: 0; transform: scale(0.5); 
+        }
+    to 
+    { opacity: 1; transform: scale(1); 
+        }
+}
+
+@keyframes evaporate
+{
+    from 
+    { opacity: 1; transform: scale(1); 
+        }
+    to 
+    { opacity: 0; transform: scale(0.5); 
+        }
+}
+
+/* Стили для сердечек */
+.heart-fall
+{
+    position: absolute;
+    font-size: 24px; /* Размер сердечка */
+    color: #ff6b6b; /* Цвет сердечка */
+    animation: fall linear infinite;
+}
+
+@keyframes fall
+{
+    from 
+    { transform: translateY(-10%); 
+        }
+    to 
+    { transform: translateY(110vh); 
+        }
+}
