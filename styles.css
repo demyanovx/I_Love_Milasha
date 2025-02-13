@@ -6,7 +6,7 @@ body
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black; /* Чёрный фон */
+    background-color: black;
     font-family: 'Helvetica', sans-serif;
     overflow: hidden;
 }
@@ -23,7 +23,7 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Убедимся, что контент выше звёзд */
+    z-index: 2;
 }
 
 .heart
@@ -52,8 +52,8 @@ body
     line-height: 1.5;
     color: white;
     white-space: pre-line;
-    opacity: 0; /* Начальная прозрачность */
-    animation: fadeIn 2s ease-in-out forwards; /* Анимация появления */
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn
@@ -72,29 +72,28 @@ body
     padding: 18px 25px;
     font-size: 20px;
     color: white;
-    background-color: #ff0000; /* Исходный цвет */
+    background-color: #ff0000;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.5s ease; /* Плавные переходы для всех свойств */
-    position: relative; /* Добавляем позиционирование */
-    z-index: 1; /* Убедимся, что кнопка выше текста */
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
 }
 
 #start-button:hover
 {
-    background-color: #FB0456; /* Цвет при наведении */
+    background-color: #FB0456;
 }
 
 #start-button:active
 {
-    background-color: #FF69B4; /* Розовый цвет при нажатии */
-    transform: scale(0.95); /* Уменьшение размера */
-    opacity: 0; /* Плавное исчезновение */
-    transition: all 2s ease; /* Увеличиваем длительность анимации исчезновения */
+    background-color: #FF69B4;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 2s ease;
 }
 
-/* Стили для звёзд */
 #stars-container
 {
     position: fixed;
@@ -102,19 +101,18 @@ body
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Звёзды на заднем плане */
+    z-index: 1;
 }
 
-/* Стили для звёзд */
 .star
 {
     position: absolute;
-    width: 2px; /* Увеличиваем размер звёзд */
-    height: 2px; /* Увеличиваем размер звёзд */
+    width: 2px;
+    height: 2px;
     background-color: white;
     border-radius: 50%;
     animation: twinkle 2s infinite ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Добавляем свечение */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
 @keyframes twinkle
@@ -127,11 +125,10 @@ body
         }
 }
 
-/* Стили для фотографий */
 .photo
 {
     position: absolute;
-    width: 100px; /* Размер фотографии */
+    width: 100px;
     height: 100px;
     border-radius: 10px;
     object-fit: cover;
@@ -158,12 +155,11 @@ body
         }
 }
 
-/* Стили для сердечек */
 .heart-fall
 {
     position: absolute;
-    font-size: 24px; /* Размер сердечка */
-    color: #ff6b6b; /* Цвет сердечка */
+    font-size: 24px;
+    color: #ff6b6b;
     animation: fall linear infinite;
 }
 
